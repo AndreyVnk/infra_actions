@@ -11,11 +11,11 @@ jobs:
     steps:
     # Запуск actions checkout — готового скрипта 
     # для клонирования репозитория
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set up Python
       # Запуск actions setup-python — готового скрипта 
       # для развёртывания окружения Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         # Выбор версии Python
         python-version: 3.7
@@ -37,7 +37,7 @@ jobs:
         # <корневая_папка_infra_actions>/<папка_проекта>/manage.py
         # cd yamdb_final/
         # запустить написанные разработчиком тесты
-        pytest
+        # pytest
 
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
